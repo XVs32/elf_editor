@@ -1,0 +1,9 @@
+1. file_analyzer.c
+2. elf.h
+3. elf_32.h
+4. elf_64.h
+5. elf_share.h
+6. ld32.h
+7. ld32.c
+8. one-byte_opcodes.txt
+9. two-byte_opcodes.txt

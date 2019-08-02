@@ -1,0 +1,256 @@
+00: Grp6 (1A)
+01: Grp7 (1A)
+02: LAR Gv,Ew
+03: LSL Gv,Ew
+04:
+05: SYSCALL (o64)
+06: CLTS
+07: SYSRET (o64)
+08: INVD
+09: WBINVD
+0a:
+0b: UD2 (1B)
+0c:
+0d: GrpP
+0e: FEMMS
+0f: 3DNow! Pq,Qq,Ib
+10: vmovups Vps,Wps | vmovupd Vpd,Wpd (66) | vmovss Vx,Hx,Wss (F3),(v1) | vmovsd Vx,Hx,Wsd (F2),(v1)
+11: vmovups Wps,Vps | vmovupd Wpd,Vpd (66) | vmovss Wss,Hx,Vss (F3),(v1) | vmovsd Wsd,Hx,Vsd (F2),(v1)
+12: vmovlps Vq,Hq,Mq (v1) | vmovhlps Vq,Hq,Uq (v1) | vmovlpd Vq,Hq,Mq (66),(v1) | vmovsldup Vx,Wx (F3) | vmovddup Vx,Wx (F2)
+13: vmovlps Mq,Vq (v1) | vmovlpd Mq,Vq (66),(v1)
+14: vunpcklps Vx,Hx,Wx | vunpcklpd Vx,Hx,Wx (66)
+15: vunpckhps Vx,Hx,Wx | vunpckhpd Vx,Hx,Wx (66)
+16: vmovhps Vdq,Hq,Mq (v1) | vmovlhps Vdq,Hq,Uq (v1) | vmovhpd Vdq,Hq,Mq (66),(v1) | vmovshdup Vx,Wx (F3)
+17: vmovhps Mq,Vq (v1) | vmovhpd Mq,Vq (66),(v1)
+18: Grp16 (1A)
+19:
+1a: BNDCL Gv,Ev (F3) | BNDCU Gv,Ev (F2) | BNDMOV Gv,Ev (66) | BNDLDX Gv,Ev
+1b: BNDCN Gv,Ev (F2) | BNDMOV Ev,Gv (66) | BNDMK Gv,Ev (F3) | BNDSTX Ev,Gv
+1c:
+1d:
+1e:
+1f: NOP Ev
+20: MOV Rd,Cd
+21: MOV Rd,Dd
+22: MOV Cd,Rd
+23: MOV Dd,Rd
+24:
+25:
+26:
+27:
+28: vmovaps Vps,Wps | vmovapd Vpd,Wpd (66)
+29: vmovaps Wps,Vps | vmovapd Wpd,Vpd (66)
+2a: cvtpi2ps Vps,Qpi | cvtpi2pd Vpd,Qpi (66) | vcvtsi2ss Vss,Hss,Ey (F3),(v1) | vcvtsi2sd Vsd,Hsd,Ey (F2),(v1)
+2b: vmovntps Mps,Vps | vmovntpd Mpd,Vpd (66)
+2c: cvttps2pi Ppi,Wps | cvttpd2pi Ppi,Wpd (66) | vcvttss2si Gy,Wss (F3),(v1) | vcvttsd2si Gy,Wsd (F2),(v1)
+2d: cvtps2pi Ppi,Wps | cvtpd2pi Qpi,Wpd (66) | vcvtss2si Gy,Wss (F3),(v1) | vcvtsd2si Gy,Wsd (F2),(v1)
+2e: vucomiss Vss,Wss (v1) | vucomisd  Vsd,Wsd (66),(v1)
+2f: vcomiss Vss,Wss (v1) | vcomisd  Vsd,Wsd (66),(v1)
+30: WRMSR
+31: RDTSC
+32: RDMSR
+33: RDPMC
+34: SYSENTER
+35: SYSEXIT
+36:
+37: GETSEC
+38: escape # 3-byte escape 1
+39:
+3a: escape # 3-byte escape 2
+3b:
+3c:
+3d:
+3e:
+3f:
+40: CMOVO Gv,Ev
+41: CMOVNO Gv,Ev | kandw/q Vk,Hk,Uk | kandb/d Vk,Hk,Uk (66)
+42: CMOVB/C/NAE Gv,Ev | kandnw/q Vk,Hk,Uk | kandnb/d Vk,Hk,Uk (66)
+43: CMOVAE/NB/NC Gv,Ev
+44: CMOVE/Z Gv,Ev | knotw/q Vk,Uk | knotb/d Vk,Uk (66)
+45: CMOVNE/NZ Gv,Ev | korw/q Vk,Hk,Uk | korb/d Vk,Hk,Uk (66)
+46: CMOVBE/NA Gv,Ev | kxnorw/q Vk,Hk,Uk | kxnorb/d Vk,Hk,Uk (66)
+47: CMOVA/NBE Gv,Ev | kxorw/q Vk,Hk,Uk | kxorb/d Vk,Hk,Uk (66)
+48: CMOVS Gv,Ev
+49: CMOVNS Gv,Ev
+4a: CMOVP/PE Gv,Ev | kaddw/q Vk,Hk,Uk | kaddb/d Vk,Hk,Uk (66)
+4b: CMOVNP/PO Gv,Ev | kunpckbw Vk,Hk,Uk (66) | kunpckwd/dq Vk,Hk,Uk
+4c: CMOVL/NGE Gv,Ev
+4d: CMOVNL/GE Gv,Ev
+4e: CMOVLE/NG Gv,Ev
+4f: CMOVNLE/G Gv,Ev
+50: vmovmskps Gy,Ups | vmovmskpd Gy,Upd (66)
+51: vsqrtps Vps,Wps | vsqrtpd Vpd,Wpd (66) | vsqrtss Vss,Hss,Wss (F3),(v1) | vsqrtsd Vsd,Hsd,Wsd (F2),(v1)
+52: vrsqrtps Vps,Wps | vrsqrtss Vss,Hss,Wss (F3),(v1)
+53: vrcpps Vps,Wps | vrcpss Vss,Hss,Wss (F3),(v1)
+54: vandps Vps,Hps,Wps | vandpd Vpd,Hpd,Wpd (66)
+55: vandnps Vps,Hps,Wps | vandnpd Vpd,Hpd,Wpd (66)
+56: vorps Vps,Hps,Wps | vorpd Vpd,Hpd,Wpd (66)
+57: vxorps Vps,Hps,Wps | vxorpd Vpd,Hpd,Wpd (66)
+58: vaddps Vps,Hps,Wps | vaddpd Vpd,Hpd,Wpd (66) | vaddss Vss,Hss,Wss (F3),(v1) | vaddsd Vsd,Hsd,Wsd (F2),(v1)
+59: vmulps Vps,Hps,Wps | vmulpd Vpd,Hpd,Wpd (66) | vmulss Vss,Hss,Wss (F3),(v1) | vmulsd Vsd,Hsd,Wsd (F2),(v1)
+5a: vcvtps2pd Vpd,Wps | vcvtpd2ps Vps,Wpd (66) | vcvtss2sd Vsd,Hx,Wss (F3),(v1) | vcvtsd2ss Vss,Hx,Wsd (F2),(v1)
+5b: vcvtdq2ps Vps,Wdq | vcvtqq2ps Vps,Wqq (evo) | vcvtps2dq Vdq,Wps (66) | vcvttps2dq Vdq,Wps (F3)
+5c: vsubps Vps,Hps,Wps | vsubpd Vpd,Hpd,Wpd (66) | vsubss Vss,Hss,Wss (F3),(v1) | vsubsd Vsd,Hsd,Wsd (F2),(v1)
+5d: vminps Vps,Hps,Wps | vminpd Vpd,Hpd,Wpd (66) | vminss Vss,Hss,Wss (F3),(v1) | vminsd Vsd,Hsd,Wsd (F2),(v1)
+5e: vdivps Vps,Hps,Wps | vdivpd Vpd,Hpd,Wpd (66) | vdivss Vss,Hss,Wss (F3),(v1) | vdivsd Vsd,Hsd,Wsd (F2),(v1)
+5f: vmaxps Vps,Hps,Wps | vmaxpd Vpd,Hpd,Wpd (66) | vmaxss Vss,Hss,Wss (F3),(v1) | vmaxsd Vsd,Hsd,Wsd (F2),(v1)
+60: punpcklbw Pq,Qd | vpunpcklbw Vx,Hx,Wx (66),(v1)
+61: punpcklwd Pq,Qd | vpunpcklwd Vx,Hx,Wx (66),(v1)
+62: punpckldq Pq,Qd | vpunpckldq Vx,Hx,Wx (66),(v1)
+63: packsswb Pq,Qq | vpacksswb Vx,Hx,Wx (66),(v1)
+64: pcmpgtb Pq,Qq | vpcmpgtb Vx,Hx,Wx (66),(v1)
+65: pcmpgtw Pq,Qq | vpcmpgtw Vx,Hx,Wx (66),(v1)
+66: pcmpgtd Pq,Qq | vpcmpgtd Vx,Hx,Wx (66),(v1)
+67: packuswb Pq,Qq | vpackuswb Vx,Hx,Wx (66),(v1)
+68: punpckhbw Pq,Qd | vpunpckhbw Vx,Hx,Wx (66),(v1)
+69: punpckhwd Pq,Qd | vpunpckhwd Vx,Hx,Wx (66),(v1)
+6a: punpckhdq Pq,Qd | vpunpckhdq Vx,Hx,Wx (66),(v1)
+6b: packssdw Pq,Qd | vpackssdw Vx,Hx,Wx (66),(v1)
+6c: vpunpcklqdq Vx,Hx,Wx (66),(v1)
+6d: vpunpckhqdq Vx,Hx,Wx (66),(v1)
+6e: movd/q Pd,Ey | vmovd/q Vy,Ey (66),(v1)
+6f: movq Pq,Qq | vmovdqa Vx,Wx (66) | vmovdqa32/64 Vx,Wx (66),(evo) | vmovdqu Vx,Wx (F3) | vmovdqu32/64 Vx,Wx (F3),(evo) | vmovdqu8/16 Vx,Wx (F2),(ev)
+70: pshufw Pq,Qq,Ib | vpshufd Vx,Wx,Ib (66),(v1) | vpshufhw Vx,Wx,Ib (F3),(v1) | vpshuflw Vx,Wx,Ib (F2),(v1)
+71: Grp12 (1A)
+72: Grp13 (1A)
+73: Grp14 (1A)
+74: pcmpeqb Pq,Qq | vpcmpeqb Vx,Hx,Wx (66),(v1)
+75: pcmpeqw Pq,Qq | vpcmpeqw Vx,Hx,Wx (66),(v1)
+76: pcmpeqd Pq,Qq | vpcmpeqd Vx,Hx,Wx (66),(v1)
+77: emms | vzeroupper | vzeroall
+78: VMREAD Ey,Gy | vcvttps2udq/pd2udq Vx,Wpd (evo) | vcvttsd2usi Gv,Wx (F2),(ev) | vcvttss2usi Gv,Wx (F3),(ev) | vcvttps2uqq/pd2uqq Vx,Wx (66),(ev)
+79: VMWRITE Gy,Ey | vcvtps2udq/pd2udq Vx,Wpd (evo) | vcvtsd2usi Gv,Wx (F2),(ev) | vcvtss2usi Gv,Wx (F3),(ev) | vcvtps2uqq/pd2uqq Vx,Wx (66),(ev)
+7a: vcvtudq2pd/uqq2pd Vpd,Wx (F3),(ev) | vcvtudq2ps/uqq2ps Vpd,Wx (F2),(ev) | vcvttps2qq/pd2qq Vx,Wx (66),(ev)
+7b: vcvtusi2sd Vpd,Hpd,Ev (F2),(ev) | vcvtusi2ss Vps,Hps,Ev (F3),(ev) | vcvtps2qq/pd2qq Vx,Wx (66),(ev)
+7c: vhaddpd Vpd,Hpd,Wpd (66) | vhaddps Vps,Hps,Wps (F2)
+7d: vhsubpd Vpd,Hpd,Wpd (66) | vhsubps Vps,Hps,Wps (F2)
+7e: movd/q Ey,Pd | vmovd/q Ey,Vy (66),(v1) | vmovq Vq,Wq (F3),(v1)
+7f: movq Qq,Pq | vmovdqa Wx,Vx (66) | vmovdqa32/64 Wx,Vx (66),(evo) | vmovdqu Wx,Vx (F3) | vmovdqu32/64 Wx,Vx (F3),(evo) | vmovdqu8/16 Wx,Vx (F2),(ev)
+80: JO Jz (f64)
+81: JNO Jz (f64)
+82: JB/JC/JNAE Jz (f64)
+83: JAE/JNB/JNC Jz (f64)
+84: JE/JZ Jz (f64)
+85: JNE/JNZ Jz (f64)
+86: JBE/JNA Jz (f64)
+87: JA/JNBE Jz (f64)
+88: JS Jz (f64)
+89: JNS Jz (f64)
+8a: JP/JPE Jz (f64)
+8b: JNP/JPO Jz (f64)
+8c: JL/JNGE Jz (f64)
+8d: JNL/JGE Jz (f64)
+8e: JLE/JNG Jz (f64)
+8f: JNLE/JG Jz (f64)
+90: SETO Eb | kmovw/q Vk,Wk | kmovb/d Vk,Wk (66)
+91: SETNO Eb | kmovw/q Mv,Vk | kmovb/d Mv,Vk (66)
+92: SETB/C/NAE Eb | kmovw Vk,Rv | kmovb Vk,Rv (66) | kmovq/d Vk,Rv (F2)
+93: SETAE/NB/NC Eb | kmovw Gv,Uk | kmovb Gv,Uk (66) | kmovq/d Gv,Uk (F2)
+94: SETE/Z Eb
+95: SETNE/NZ Eb
+96: SETBE/NA Eb
+97: SETA/NBE Eb
+98: SETS Eb | kortestw/q Vk,Uk | kortestb/d Vk,Uk (66)
+99: SETNS Eb | ktestw/q Vk,Uk | ktestb/d Vk,Uk (66)
+9a: SETP/PE Eb
+9b: SETNP/PO Eb
+9c: SETL/NGE Eb
+9d: SETNL/GE Eb
+9e: SETLE/NG Eb
+9f: SETNLE/G Eb
+a0: PUSH FS (d64)
+a1: POP FS (d64)
+a2: CPUID
+a3: BT Ev,Gv
+a4: SHLD Ev,Gv,Ib
+a5: SHLD Ev,Gv,CL
+a6: GrpPDLK
+a7: GrpRNG
+a8: PUSH GS (d64)
+a9: POP GS (d64)
+aa: RSM
+ab: BTS Ev,Gv
+ac: SHRD Ev,Gv,Ib
+ad: SHRD Ev,Gv,CL
+ae: Grp15 (1A),(1C)
+af: IMUL Gv,Ev
+b0: CMPXCHG Eb,Gb
+b1: CMPXCHG Ev,Gv
+b2: LSS Gv,Mp
+b3: BTR Ev,Gv
+b4: LFS Gv,Mp
+b5: LGS Gv,Mp
+b6: MOVZX Gv,Eb
+b7: MOVZX Gv,Ew
+b8: JMPE (!F3) | POPCNT Gv,Ev (F3)
+b9: Grp10 (1A)
+ba: Grp8 Ev,Ib (1A)
+bb: BTC Ev,Gv
+bc: BSF Gv,Ev (!F3) | TZCNT Gv,Ev (F3)
+bd: BSR Gv,Ev (!F3) | LZCNT Gv,Ev (F3)
+be: MOVSX Gv,Eb
+bf: MOVSX Gv,Ew
+c0: XADD Eb,Gb
+c1: XADD Ev,Gv
+c2: vcmpps Vps,Hps,Wps,Ib | vcmppd Vpd,Hpd,Wpd,Ib (66) | vcmpss Vss,Hss,Wss,Ib (F3),(v1) | vcmpsd Vsd,Hsd,Wsd,Ib (F2),(v1)
+c3: movnti My,Gy
+c4: pinsrw Pq,Ry/Mw,Ib | vpinsrw Vdq,Hdq,Ry/Mw,Ib (66),(v1)
+c5: pextrw Gd,Nq,Ib | vpextrw Gd,Udq,Ib (66),(v1)
+c6: vshufps Vps,Hps,Wps,Ib | vshufpd Vpd,Hpd,Wpd,Ib (66)
+c7: Grp9 (1A)
+c8: BSWAP RAX/EAX/R8/R8D
+c9: BSWAP RCX/ECX/R9/R9D
+ca: BSWAP RDX/EDX/R10/R10D
+cb: BSWAP RBX/EBX/R11/R11D
+cc: BSWAP RSP/ESP/R12/R12D
+cd: BSWAP RBP/EBP/R13/R13D
+ce: BSWAP RSI/ESI/R14/R14D
+cf: BSWAP RDI/EDI/R15/R15D
+d0: vaddsubpd Vpd,Hpd,Wpd (66) | vaddsubps Vps,Hps,Wps (F2)
+d1: psrlw Pq,Qq | vpsrlw Vx,Hx,Wx (66),(v1)
+d2: psrld Pq,Qq | vpsrld Vx,Hx,Wx (66),(v1)
+d3: psrlq Pq,Qq | vpsrlq Vx,Hx,Wx (66),(v1)
+d4: paddq Pq,Qq | vpaddq Vx,Hx,Wx (66),(v1)
+d5: pmullw Pq,Qq | vpmullw Vx,Hx,Wx (66),(v1)
+d6: vmovq Wq,Vq (66),(v1) | movq2dq Vdq,Nq (F3) | movdq2q Pq,Uq (F2)
+d7: pmovmskb Gd,Nq | vpmovmskb Gd,Ux (66),(v1)
+d8: psubusb Pq,Qq | vpsubusb Vx,Hx,Wx (66),(v1)
+d9: psubusw Pq,Qq | vpsubusw Vx,Hx,Wx (66),(v1)
+da: pminub Pq,Qq | vpminub Vx,Hx,Wx (66),(v1)
+db: pand Pq,Qq | vpand Vx,Hx,Wx (66),(v1) | vpandd/q Vx,Hx,Wx (66),(evo)
+dc: paddusb Pq,Qq | vpaddusb Vx,Hx,Wx (66),(v1)
+dd: paddusw Pq,Qq | vpaddusw Vx,Hx,Wx (66),(v1)
+de: pmaxub Pq,Qq | vpmaxub Vx,Hx,Wx (66),(v1)
+df: pandn Pq,Qq | vpandn Vx,Hx,Wx (66),(v1) | vpandnd/q Vx,Hx,Wx (66),(evo)
+e0: pavgb Pq,Qq | vpavgb Vx,Hx,Wx (66),(v1)
+e1: psraw Pq,Qq | vpsraw Vx,Hx,Wx (66),(v1)
+e2: psrad Pq,Qq | vpsrad Vx,Hx,Wx (66),(v1)
+e3: pavgw Pq,Qq | vpavgw Vx,Hx,Wx (66),(v1)
+e4: pmulhuw Pq,Qq | vpmulhuw Vx,Hx,Wx (66),(v1)
+e5: pmulhw Pq,Qq | vpmulhw Vx,Hx,Wx (66),(v1)
+e6: vcvttpd2dq Vx,Wpd (66) | vcvtdq2pd Vx,Wdq (F3) | vcvtdq2pd/qq2pd Vx,Wdq (F3),(evo) | vcvtpd2dq Vx,Wpd (F2)
+e7: movntq Mq,Pq | vmovntdq Mx,Vx (66)
+e8: psubsb Pq,Qq | vpsubsb Vx,Hx,Wx (66),(v1)
+e9: psubsw Pq,Qq | vpsubsw Vx,Hx,Wx (66),(v1)
+ea: pminsw Pq,Qq | vpminsw Vx,Hx,Wx (66),(v1)
+eb: por Pq,Qq | vpor Vx,Hx,Wx (66),(v1) | vpord/q Vx,Hx,Wx (66),(evo)
+ec: paddsb Pq,Qq | vpaddsb Vx,Hx,Wx (66),(v1)
+ed: paddsw Pq,Qq | vpaddsw Vx,Hx,Wx (66),(v1)
+ee: pmaxsw Pq,Qq | vpmaxsw Vx,Hx,Wx (66),(v1)
+ef: pxor Pq,Qq | vpxor Vx,Hx,Wx (66),(v1) | vpxord/q Vx,Hx,Wx (66),(evo)
+f0: vlddqu Vx,Mx (F2)
+f1: psllw Pq,Qq | vpsllw Vx,Hx,Wx (66),(v1)
+f2: pslld Pq,Qq | vpslld Vx,Hx,Wx (66),(v1)
+f3: psllq Pq,Qq | vpsllq Vx,Hx,Wx (66),(v1)
+f4: pmuludq Pq,Qq | vpmuludq Vx,Hx,Wx (66),(v1)
+f5: pmaddwd Pq,Qq | vpmaddwd Vx,Hx,Wx (66),(v1)
+f6: psadbw Pq,Qq | vpsadbw Vx,Hx,Wx (66),(v1)
+f7: maskmovq Pq,Nq | vmaskmovdqu Vx,Ux (66),(v1)
+f8: psubb Pq,Qq | vpsubb Vx,Hx,Wx (66),(v1)
+f9: psubw Pq,Qq | vpsubw Vx,Hx,Wx (66),(v1)
+fa: psubd Pq,Qq | vpsubd Vx,Hx,Wx (66),(v1)
+fb: psubq Pq,Qq | vpsubq Vx,Hx,Wx (66),(v1)
+fc: paddb Pq,Qq | vpaddb Vx,Hx,Wx (66),(v1)
+fd: paddw Pq,Qq | vpaddw Vx,Hx,Wx (66),(v1)
+fe: paddd Pq,Qq | vpaddd Vx,Hx,Wx (66),(v1)
+ff: UD0

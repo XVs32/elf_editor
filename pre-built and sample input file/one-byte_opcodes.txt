@@ -1,0 +1,256 @@
+00: ADD Eb,Gb
+01: ADD Ev,Gv
+02: ADD Gb,Eb
+03: ADD Gv,Ev
+04: ADD AL,Ib
+05: ADD rAX,Iz
+06: PUSH ES (i64)
+07: POP ES (i64)
+08: OR Eb,Gb
+09: OR Ev,Gv
+0a: OR Gb,Eb
+0b: OR Gv,Ev
+0c: OR AL,Ib
+0d: OR rAX,Iz
+0e: PUSH CS (i64)
+0f: escape # 2-byte escape
+10: ADC Eb,Gb
+11: ADC Ev,Gv
+12: ADC Gb,Eb
+13: ADC Gv,Ev
+14: ADC AL,Ib
+15: ADC rAX,Iz
+16: PUSH SS (i64)
+17: POP SS (i64)
+18: SBB Eb,Gb
+19: SBB Ev,Gv
+1a: SBB Gb,Eb
+1b: SBB Gv,Ev
+1c: SBB AL,Ib
+1d: SBB rAX,Iz
+1e: PUSH DS (i64)
+1f: POP DS (i64)
+20: AND Eb,Gb
+21: AND Ev,Gv
+22: AND Gb,Eb
+23: AND Gv,Ev
+24: AND AL,Ib
+25: AND rAx,Iz
+26: SEG=ES (Prefix)
+27: DAA (i64)
+28: SUB Eb,Gb
+29: SUB Ev,Gv
+2a: SUB Gb,Eb
+2b: SUB Gv,Ev
+2c: SUB AL,Ib
+2d: SUB rAX,Iz
+2e: SEG=CS (Prefix)
+2f: DAS (i64)
+30: XOR Eb,Gb
+31: XOR Ev,Gv
+32: XOR Gb,Eb
+33: XOR Gv,Ev
+34: XOR AL,Ib
+35: XOR rAX,Iz
+36: SEG=SS (Prefix)
+37: AAA (i64)
+38: CMP Eb,Gb
+39: CMP Ev,Gv
+3a: CMP Gb,Eb
+3b: CMP Gv,Ev
+3c: CMP AL,Ib
+3d: CMP rAX,Iz
+3e: SEG=DS (Prefix)
+3f: AAS (i64)
+40: INC eAX (i64) | REX (o64)
+41: INC eCX (i64) | REX.B (o64)
+42: INC eDX (i64) | REX.X (o64)
+43: INC eBX (i64) | REX.XB (o64)
+44: INC eSP (i64) | REX.R (o64)
+45: INC eBP (i64) | REX.RB (o64)
+46: INC eSI (i64) | REX.RX (o64)
+47: INC eDI (i64) | REX.RXB (o64)
+48: DEC eAX (i64) | REX.W (o64)
+49: DEC eCX (i64) | REX.WB (o64)
+4a: DEC eDX (i64) | REX.WX (o64)
+4b: DEC eBX (i64) | REX.WXB (o64)
+4c: DEC eSP (i64) | REX.WR (o64)
+4d: DEC eBP (i64) | REX.WRB (o64)
+4e: DEC eSI (i64) | REX.WRX (o64)
+4f: DEC eDI (i64) | REX.WRXB (o64)
+50: PUSH rAX/r8 (d64)
+51: PUSH rCX/r9 (d64)
+52: PUSH rDX/r10 (d64)
+53: PUSH rBX/r11 (d64)
+54: PUSH rSP/r12 (d64)
+55: PUSH rBP/r13 (d64)
+56: PUSH rSI/r14 (d64)
+57: PUSH rDI/r15 (d64)
+58: POP rAX/r8 (d64)
+59: POP rCX/r9 (d64)
+5a: POP rDX/r10 (d64)
+5b: POP rBX/r11 (d64)
+5c: POP rSP/r12 (d64)
+5d: POP rBP/r13 (d64)
+5e: POP rSI/r14 (d64)
+5f: POP rDI/r15 (d64)
+60: PUSHA/PUSHAD (i64)
+61: POPA/POPAD (i64)
+62: BOUND Gv,Ma (i64) | EVEX (Prefix)
+63: ARPL Ew,Gw (i64) | MOVSXD Gv,Ev (o64)
+64: SEG=FS (Prefix)
+65: SEG=GS (Prefix)
+66: Operand-Size (Prefix)
+67: Address-Size (Prefix)
+68: PUSH Iz (d64)
+69: IMUL Gv,Ev,Iz
+6a: PUSH Ib (d64)
+6b: IMUL Gv,Ev,Ib
+6c: INS/INSB Yb,DX
+6d: INS/INSW/INSD Yz,DX
+6e: OUTS/OUTSB DX,Xb
+6f: OUTS/OUTSW/OUTSD DX,Xz
+70: JO Jb
+71: JNO Jb
+72: JB/JNAE/JC Jb
+73: JNB/JAE/JNC Jb
+74: JZ/JE Jb
+75: JNZ/JNE Jb
+76: JBE/JNA Jb
+77: JNBE/JA Jb
+78: JS Jb
+79: JNS Jb
+7a: JP/JPE Jb
+7b: JNP/JPO Jb
+7c: JL/JNGE Jb
+7d: JNL/JGE Jb
+7e: JLE/JNG Jb
+7f: JNLE/JG Jb
+80: Grp1 Eb,Ib (1A)
+81: Grp1 Ev,Iz (1A)
+82: Grp1 Eb,Ib (1A),(i64)
+83: Grp1 Ev,Ib (1A)
+84: TEST Eb,Gb
+85: TEST Ev,Gv
+86: XCHG Eb,Gb
+87: XCHG Ev,Gv
+88: MOV Eb,Gb
+89: MOV Ev,Gv
+8a: MOV Gb,Eb
+8b: MOV Gv,Ev
+8c: MOV Ev,Sw
+8d: LEA Gv,M
+8e: MOV Sw,Ew
+8f: Grp1A (1A) | POP Ev (d64)
+90: NOP | PAUSE (F3) | XCHG r8,rAX
+91: XCHG rCX/r9,rAX
+92: XCHG rDX/r10,rAX
+93: XCHG rBX/r11,rAX
+94: XCHG rSP/r12,rAX
+95: XCHG rBP/r13,rAX
+96: XCHG rSI/r14,rAX
+97: XCHG rDI/r15,rAX
+98: CBW/CWDE/CDQE
+99: CWD/CDQ/CQO
+9a: CALLF Ap (i64)
+9b: FWAIT/WAIT
+9c: PUSHF/D/Q Fv (d64)
+9d: POPF/D/Q Fv (d64)
+9e: SAHF
+9f: LAHF
+a0: MOV AL,Ob
+a1: MOV rAX,Ov
+a2: MOV Ob,AL
+a3: MOV Ov,rAX
+a4: MOVS/B Yb,Xb
+a5: MOVS/W/D/Q Yv,Xv
+a6: CMPS/B Xb,Yb
+a7: CMPS/W/D Xv,Yv
+a8: TEST AL,Ib
+a9: TEST rAX,Iz
+aa: STOS/B Yb,AL
+ab: STOS/W/D/Q Yv,rAX
+ac: LODS/B AL,Xb
+ad: LODS/W/D/Q rAX,Xv
+ae: SCAS/B AL,Yb
+af: SCAS/W/D/Q rAX,Yv
+b0: MOV AL/R8L,Ib
+b1: MOV CL/R9L,Ib
+b2: MOV DL/R10L,Ib
+b3: MOV BL/R11L,Ib
+b4: MOV AH/R12L,Ib
+b5: MOV CH/R13L,Ib
+b6: MOV DH/R14L,Ib
+b7: MOV BH/R15L,Ib
+b8: MOV rAX/r8,Iv
+b9: MOV rCX/r9,Iv
+ba: MOV rDX/r10,Iv
+bb: MOV rBX/r11,Iv
+bc: MOV rSP/r12,Iv
+bd: MOV rBP/r13,Iv
+be: MOV rSI/r14,Iv
+bf: MOV rDI/r15,Iv
+c0: Grp2 Eb,Ib (1A)
+c1: Grp2 Ev,Ib (1A)
+c2: RETN Iw (f64)
+c3: RETN
+c4: LES Gz,Mp (i64) | VEX+2byte (Prefix)
+c5: LDS Gz,Mp (i64) | VEX+1byte (Prefix)
+c6: Grp11A Eb,Ib (1A)
+c7: Grp11B Ev,Iz (1A)
+c8: ENTER Iw,Ib
+c9: LEAVE (d64)
+ca: RETF Iw
+cb: RETF
+cc: INT3
+cd: INT Ib
+ce: INTO (i64)
+cf: IRET/D/Q
+d0: Grp2 Eb,1 (1A)
+d1: Grp2 Ev,1 (1A)
+d2: Grp2 Eb,CL (1A)
+d3: Grp2 Ev,CL (1A)
+d4: AAM Ib (i64)
+d5: AAD Ib (i64)
+d6:
+d7: XLAT/XLATB
+d8: ESC
+d9: ESC
+da: ESC
+db: ESC
+dc: ESC
+dd: ESC
+de: ESC
+df: ESC
+e0: LOOPNE/LOOPNZ Jb (f64)
+e1: LOOPE/LOOPZ Jb (f64)
+e2: LOOP Jb (f64)
+e3: JrCXZ Jb (f64)
+e4: IN AL,Ib
+e5: IN eAX,Ib
+e6: OUT Ib,AL
+e7: OUT Ib,eAX
+e8: CALL Jz (f64)
+e9: JMP-near Jz (f64)
+ea: JMP-far Ap (i64)
+eb: JMP-short Jb (f64)
+ec: IN AL,DX
+ed: IN eAX,DX
+ee: OUT DX,AL
+ef: OUT DX,eAX
+f0: LOCK (Prefix)
+f1:
+f2: REPNE (Prefix) | XACQUIRE (Prefix)
+f3: REP/REPE (Prefix) | XRELEASE (Prefix)
+f4: HLT
+f5: CMC
+f6: Grp3_1 Eb (1A)
+f7: Grp3_2 Ev (1A)
+f8: CLC
+f9: STC
+fa: CLI
+fb: STI
+fc: CLD
+fd: STD
+fe: Grp4 (1A)
+ff: Grp5 (1A)
